@@ -20,6 +20,7 @@ func Hello(name string, language string) string {
 	return greetingPrefix(language) + name
 }
 
+// Separate method is good
 func greetingPrefix(language string) (prefix string) {
 	switch language {
 	case french:
