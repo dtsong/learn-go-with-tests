@@ -2,7 +2,7 @@ name: Build and Test Go
 
 on:
   push:
-    branches: [ master fix-github-actions ]
+    branches: [ master ]
   pull_request:
     branches: [ master fix-github-actions ]
 
@@ -23,7 +23,10 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: cd ./${{ matrix.path }} && go build -v
+      run: |
+        cd ./${{ matrix.path }}
+        go build -v
 
     - name: Test
-      run: go test -v
+      run: |
+        go test -v
