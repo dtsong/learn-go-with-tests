@@ -13,6 +13,7 @@ jobs:
       matrix:
         path:
           - hello-world
+          - integers
     steps:
     - uses: actions/checkout@v2
 
